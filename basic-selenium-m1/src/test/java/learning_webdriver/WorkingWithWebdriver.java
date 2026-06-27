@@ -37,31 +37,31 @@ public class WorkingWithWebdriver {
 
 //		ctrl + shift + o => auto import
 //		Window win = driver.manage().window();
-		
+
 //		win.maximize();
 //		Thread.sleep(1000);
 //		win.minimize();
 //		Thread.sleep(1000);
 //		win.fullscreen();
-		
+
 //		get size of window
 		Options opt = driver.manage();
 //		Window win = driver.manage().window();
 		Window win = opt.window();
-		
+
 //		driver.manage().window().maximize();
 //		win.maximize();
 //		win.minimize();
 		win.fullscreen();
-		
+
 //		Get the size of window
 		Dimension dim = win.getSize();
 		System.out.println(dim); // (1386, 736)
-		int width = dim.getWidth(); 
+		int width = dim.getWidth();
 		System.out.println(width); // 1386
-		int height = dim.getHeight(); 
+		int height = dim.getHeight();
 		System.out.println(height); // 736
-		
+
 //		get the location of window
 		Point pt = win.getPosition();
 		System.out.println(pt); // (150, 100)
@@ -69,15 +69,13 @@ public class WorkingWithWebdriver {
 		System.out.println(x); // 150
 		int y = pt.getY();
 		System.out.println(y); // 100
-		
+
 //		set the size of window
 		win.setSize(new Dimension(500, 400));
-		
+
 //		set the location of window
 		win.setPosition(new Point(150, 200));
-		
-		
-		
+
 		Thread.sleep(3000);
 		driver.quit();
 //		driver.getTitle();  //NoSuchSessionException
