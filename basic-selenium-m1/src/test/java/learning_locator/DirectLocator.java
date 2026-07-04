@@ -29,6 +29,21 @@ public class DirectLocator {
 		WebElement regLink = driver.findElement(By.linkText("Register"));
 		regLink.click();
 		
+		
+		
+		
+		
+		
+		
+		WebElement searchQuery = driver.findElement(By.xpath("//input[@aria-label='search-query']"));
+		searchQuery.sendKeys("selenium");
+		
+		
+		
+		
+		
+		
+		
 		Thread.sleep(3000);
 		driver.quit();
 	}
