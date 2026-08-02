@@ -16,26 +16,44 @@ public class FB_KeyBoardActions {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 		driver.get("https://www.facebook.com/");
-		
+
 		Actions act = new Actions(driver);
 
 		Thread.sleep(3000);
-				
-//		keyboard => sendKeys()
-		act.sendKeys("admin").perform();	
-		
-		act.sendKeys(Keys.TAB).perform();
-		
-		act.sendKeys("1234567890").perform();	
 
-//		press control
-		act.keyDown(Keys.CONTROL).perform();
+////		keyboard => sendKeys()
+//		act.sendKeys("admin").perform();
+//
+//		act.sendKeys(Keys.TAB).perform();
+//
+//		act.sendKeys("1234567890").perform();
+//
+////		press control
+//		act.keyDown(Keys.CONTROL).perform();
+//
+////		type a
+//		act.sendKeys("a");
+//		act.sendKeys("c");
+//
+////		release control
+//		act.keyUp(Keys.CONTROL).perform();
+//
+//		act.sendKeys(Keys.TAB).perform();
+//
+//		act.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform();
 		
-//		type a
-		act.sendKeys("a");
-		
-//		release control
-		act.keyUp(Keys.CONTROL).perform();
+//		act.sendKeys("admin" + Keys.TAB + "123456789" + Keys.ENTER).build().perform();
+
+		act.sendKeys("admin")
+			.keyDown(Keys.CONTROL)
+			.sendKeys("ac")
+			.keyUp(Keys.CONTROL)
+			.sendKeys(Keys.TAB)
+			.keyDown(Keys.CONTROL)
+			.sendKeys("v")
+			.keyUp(Keys.CONTROL)
+			.sendKeys(Keys.ENTER)
+			.perform();
 		
 		
 		Thread.sleep(3000);
