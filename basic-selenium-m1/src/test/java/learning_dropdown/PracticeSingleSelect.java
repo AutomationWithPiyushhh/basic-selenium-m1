@@ -1,6 +1,5 @@
 package learning_dropdown;
 
-import java.net.http.WebSocket;
 import java.time.Duration;
 import java.util.List;
 

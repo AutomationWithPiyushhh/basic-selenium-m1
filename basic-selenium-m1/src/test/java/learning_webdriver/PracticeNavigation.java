@@ -1,7 +1,6 @@
 package learning_webdriver;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Navigation;
